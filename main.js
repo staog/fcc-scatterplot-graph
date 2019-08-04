@@ -11,18 +11,16 @@ function graph(dataset) {
                   .style("opacity", 0)
   
   let years = dataset.map(d => d.Year);
-  let times = dataset.map(d => d.Seconds)
+  let times = dataset.map(d => d.Seconds);
   let timeFormat = d3.timeFormat("%M:%S");
   
-  console.log(times)
-  
-  const xScale = d3.scaleTime()
-                   .domain([d3.min(years), d3.max(years)])
+  const xScale = d3.scaleLinear()
+                   .domain([d3.min(years) - 1, d3.max(years) + 1])
                    .range([margin, w - margin]);
   
-  const yScale = d3.scaleLinear()
+  const yScale = d3.scaleTime()
                    .domain([d3.min(times) - 60, d3.max(times) + 60])
-                   .range(h, h - margin);
+                   .range(h - margin, h);
   
   const svg = d3.select("#graph")
                 .append("svg")
@@ -39,15 +37,17 @@ function graph(dataset) {
   
   svg.append("text")
      .attr("class", "text")
-     .attr("x", w/2.5 + 120)
+     .attr("x", w/2.5 + 220)
      .attr("y", h - 10)
-     .text("35 Fastest times up Alpe d'Huez");
+     .text("Info: wikipedia.org");
   
   const xAxis = d3.axisBottom()
-                  .scale(xScale);
+                  .scale(xScale)
+                  .tickFormat(d3.format("d"));
   
   const yAxis = d3.axisLeft()
-                  .scale(yScale);
+                  .scale(yScale)
+                  .tickFormat(timeFormat);
   
   svg.append("g")
      .attr("id", "x-axis")
@@ -56,10 +56,9 @@ function graph(dataset) {
   
   svg.append("g")
      .attr("id", "y-axis")
-     .attr("transform", "translate(" + 5 + "0)") 
-     .call(yAxis);  
+     .attr("transform", "translate(" + 5 + "0)")
+     .call(yAxis);
   
-    
 } //end of graph func
 
 d3.json("https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/cyclist-data.json", function(json){
