@@ -47,7 +47,6 @@ function graph(dataset) {
   
   const yAxis = d3.axisLeft()
                   .scale(yScale)
-                  .tickFormat(timeFormat);
   
   svg.append("g")
      .attr("id", "x-axis")
