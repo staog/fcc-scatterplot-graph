@@ -48,9 +48,11 @@ body {
 }
 
 #x-axis {
+  stroke: white;
   stroke-width: 0.5;
 }
 
 #y-axis {
+  stroke: white;
   stroke-width: 0.5;
 }
