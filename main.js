@@ -55,13 +55,12 @@ function graph(dataset) {
   
   svg.append("g")
      .attr("id", "y-axis")
-     .attr("transform", "translate(" + 5 + "0)")
+     .attr("transform", "translate(" + margin + ", 0)")
      .call(yAxis);
   
-} //end of graph func
+} // end of graph func
 
 d3.json("https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/cyclist-data.json", function(json){
   const dataset = json;
-  console.log(dataset);
   graph(dataset);
 });
