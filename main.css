@@ -29,7 +29,7 @@ body {
 }
 
 .text {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 #tooltip {
@@ -41,18 +41,16 @@ body {
   width: 220px;
   height: 60px;
   font-size: 12px;
-  background-color: lightgrey;
-  box-shadow: 1px 1px 5px;
+  background-color: lightgreen;
+  box-shadow: 1px 1px 5px black;
   border-radius: 3px;
   margin-left: 30rem;
 }
 
 #x-axis {
-  stroke: white;
   stroke-width: 0.5;
 }
 
 #y-axis {
-  stroke: white;
   stroke-width: 0.5;
 }
