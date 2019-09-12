@@ -14,7 +14,7 @@ body {
 }
 
 #container {
-  background-color: white;
+  background-color: #ddd;
   width: 900px;
   height: 600px;
   display: flex;
