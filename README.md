@@ -48,3 +48,7 @@ You can build your project by forking this CodePen pen. Or you can use this CDN 
 [DEMO](https://codepen.io/staog/full/oKebqo)
 
 =======================================================================
+
+## TODO:
+
+1. Sometimes tooltip is not showing - Need to investigate that.
