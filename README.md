@@ -51,4 +51,6 @@ You can use this CDN link to run the tests in any environment you like: https://
 
 ## TODO:
 
-1. Sometimes tooltip is not showing - Need to investigate that.
+Known bugs:
+
+1. Sometimes tooltip does not show up.
