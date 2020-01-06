@@ -48,9 +48,3 @@ You can use this CDN link to run the tests in any environment you like: https://
 [DEMO](https://codepen.io/staog/full/oKebqo)
 
 =======================================================================
-
-## TODO:
-
-Known bugs:
-
-1. Sometimes tooltip does not show up.
