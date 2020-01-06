@@ -92,8 +92,10 @@ function graph(dataset) {
      })
      .on("mouseout", d => {
        tooltip.transition()
-              .duration(50)
+              .duration(20)
               .style("opacity", 0)
+              .style('left', `60px`)
+              .style('top', `40px`)
      })
   
   legend.append("rect")
