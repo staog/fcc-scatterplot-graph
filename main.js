@@ -96,6 +96,7 @@ function graph(dataset) {
               .style("opacity", 0)
               .style('left', `60px`)
               .style('top', `40px`)
+              // moving it to top after every showing because it could block other spots on the graph
      })
   
   legend.append("rect")
